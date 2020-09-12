@@ -1,7 +1,7 @@
 package com.henryhans.forcastmvvm.internal
 
 import kotlinx.coroutines.*
-
+// Lazy
 fun <T> lazyDeferred(block: suspend CoroutineScope.() -> T ) : Lazy<Deferred<T>>{
     return lazy {
         GlobalScope.async(start = CoroutineStart.LAZY) {
