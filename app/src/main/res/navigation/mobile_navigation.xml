@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/current_weather_fragment" >
+
+    <fragment
+        android:id="@+id/current_weather_fragment"
+        android:name="com.henryhans.forcastmvvm.ui.weather.current.CurrentWeatherFragment"
+        android:label="current_weather_fragment"
+        tools:layout="@layout/current_weather_fragment" />
+    <fragment
+        android:id="@+id/list_weather_fragment"
+        android:name="com.henryhans.forcastmvvm.ui.weather.future.list.ListWeatherFragment"
+        android:label="list_weather_fragment"
+        tools:layout="@layout/list_weather_fragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.henryhans.forcastmvvm.ui.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/forecast_detail_fragment"
+        android:name="com.henryhans.forcastmvvm.ui.weather.future.detail.ForecastDetailFragment"
+        android:label="forecast_detail_fragment"
+        tools:layout="@layout/forecast_detail_fragment" />
+
+</navigation>
