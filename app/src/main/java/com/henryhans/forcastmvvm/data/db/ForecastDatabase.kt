@@ -20,7 +20,10 @@ abstract class ForecastDatabase : RoomDatabase(){
         private val LOCK = Any()
 
         operator fun invoke(context: Context) = instance ?: synchronized(LOCK){
-            instance ?: buildDatabase(context).also { instance = it }
+            instance ?: buildDatabase(context)
+                .also {
+                    instance = it
+                }
         }
 
         private fun buildDatabase(context: Context)  =
