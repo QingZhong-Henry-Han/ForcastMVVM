@@ -16,8 +16,6 @@ import retrofit2.http.Query
 
 const val API_KEY="fa7662dd524935c210fde528d6e65cb1"
 
-//http://api.weatherstack.com/current?access_key=fa7662dd524935c210fde528d6e65cb1&query=New%20York
-
 interface WeatherstackApiService {
     @GET("current")
     fun  getCurrentWeather(
