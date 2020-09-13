@@ -2,6 +2,8 @@ package com.henryhans.forcastmvvm.data.network
 
 import android.content.Context
 import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.net.NetworkRequest
 import com.henryhans.forcastmvvm.internal.NoConnectivityException
 import okhttp3.Interceptor
 import okhttp3.Response
@@ -22,9 +24,11 @@ class ConnectivityInterceptorImpl(
         val connectivityManager = appContext.getSystemService(Context.CONNECTIVITY_SERVICE)
         as ConnectivityManager
 
-        val networkInfo = connectivityManager.activeNetworkInfo
+        val activeNetwork = connectivityManager.activeNetwork
+        val networkCapabilities = connectivityManager.getNetworkCapabilities(activeNetwork)
+        return networkCapabilities != null && networkCapabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
 
-        return networkInfo != null && networkInfo.isConnected
-    }
+        return false
+     }
 
 }
