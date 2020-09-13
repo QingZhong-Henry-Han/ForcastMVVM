@@ -3,7 +3,6 @@ package com.henryhans.forcastmvvm.data.network
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.NetworkRequest
 import com.henryhans.forcastmvvm.internal.NoConnectivityException
 import okhttp3.Interceptor
 import okhttp3.Response
