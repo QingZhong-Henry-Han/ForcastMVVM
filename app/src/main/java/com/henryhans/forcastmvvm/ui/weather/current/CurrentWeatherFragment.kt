@@ -38,7 +38,7 @@ class CurrentWeatherFragment : ScopedFragment(), KodeinAware {
             .get(CurrentWeatherViewModel::class.java)
 
         bindUI()
-//        fetchJson()
+        //fetchJson()
     }
 
     private fun bindUI() = launch{
@@ -69,7 +69,7 @@ class CurrentWeatherFragment : ScopedFragment(), KodeinAware {
         client.newCall(request).enqueue(object : Callback{
             override fun onResponse(call: Call, response: Response) {
                 textView.text = response?.body?.string()
-                println(response?.body?.string());
+                println(response?.body?.string())
             }
 
             override fun onFailure(call: Call, e: IOException) {
