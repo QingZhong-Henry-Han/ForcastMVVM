@@ -58,7 +58,6 @@ interface WeatherstackApiService {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(WeatherstackApiService::class.java)
-
-       }
+        }
     }
 }

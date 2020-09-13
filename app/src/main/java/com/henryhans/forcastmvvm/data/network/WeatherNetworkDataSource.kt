@@ -5,7 +5,7 @@ import com.henryhans.forcastmvvm.data.db.entity.CurrentWeatherEntry
 import com.henryhans.forcastmvvm.data.network.response.CurrentWeatherResponse
 
 interface WeatherNetworkDataSource {
-    val downloadedCurrenrtWeather : LiveData<CurrentWeatherResponse>
+    val downloadedCurrentWeather : LiveData<CurrentWeatherResponse>
 
     suspend fun fetchCurrentWeather(
         location : String
